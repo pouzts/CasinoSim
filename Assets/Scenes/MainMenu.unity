@@ -472,10 +472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -537,7 +537,6 @@ GameObject:
   - component: {fileID: 296704552}
   - component: {fileID: 296704555}
   - component: {fileID: 296704554}
-  - component: {fileID: 296704556}
   - component: {fileID: 296704553}
   m_Layer: 5
   m_Name: PlayButton
@@ -637,18 +636,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-=======
       - m_Target: {fileID: 1797175358}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: OnStartScene
@@ -659,7 +646,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameSelection
->>>>>>> 0b58fa4b3ad1d1dd948749b620dea57c89f38650
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &296704555
@@ -670,18 +656,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296704551}
   m_CullTransparentMesh: 1
---- !u!114 &296704556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296704551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5498318cf9a56f74dbfd1b1371a48bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
