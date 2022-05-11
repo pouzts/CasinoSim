@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TestingScript : MonoBehaviour
 {
-    [SerializeField] InputField PlayerBank;
-    [SerializeField] InputField InputAmount;
-    [SerializeField] InputField WorldBank;
+    [SerializeField] TMP_Text PlayerBank;
+    [SerializeField] InputField WithdrawAmount;
+    [SerializeField] InputField DepositAmount;
+    [SerializeField] TMP_Text WorldBank;
     public GameData gd;
 
     public void Start()
     {
         gd.intData["InputAmount"] = 0;
-        InputAmount.text = gd.intData["InputAmount"].ToString();
-        WorldBank.text = gd.intData["WorldBank"].ToString();
-        PlayerBank.text = gd.intData["PlayerBank"].ToString();
+        WithdrawAmount.text = "$" + gd.intData["InputAmount"].ToString();
+        DepositAmount.text = "$" + gd.intData["InputAmount"].ToString();
+        WorldBank.text = "$" + gd.intData["WorldBank"].ToString();
+        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
     public void Deposit()
     {
@@ -28,14 +31,17 @@ public class TestingScript : MonoBehaviour
 
         gd.intData["PlayerBank"] -= gd.intData["InputAmount"];
         gd.intData["WorldBank"] += gd.intData["InputAmount"];
-        WorldBank.text = gd.intData["WorldBank"].ToString();
-        PlayerBank.text = gd.intData["PlayerBank"].ToString();
+        WorldBank.text = "$" + gd.intData["WorldBank"].ToString();
+        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
 
     private void Awake()
     {
-        InputAmount.onValueChanged.AddListener(UpdateValue);
-        InputAmount.SetTextWithoutNotify(gd.intData["InputAmount"].ToString());
+        WithdrawAmount.onValueChanged.AddListener(UpdateValue);
+        //WithdrawAmount.SetTextWithoutNotify(gd.intData["InputAmount"].ToString());
+
+        DepositAmount.onValueChanged.AddListener(UpdateValue);
+        //DepositAmount.SetTextWithoutNotify(gd.intData["InputAmount"].ToString());
     }
 
     public void WithDraw()
@@ -48,8 +54,8 @@ public class TestingScript : MonoBehaviour
 
         gd.intData["PlayerBank"] += gd.intData["InputAmount"];
         gd.intData["WorldBank"] -= gd.intData["InputAmount"];
-        WorldBank.text = gd.intData["WorldBank"].ToString();
-        PlayerBank.text = gd.intData["PlayerBank"].ToString();
+        WorldBank.text = "$" + gd.intData["WorldBank"].ToString();
+        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
 
 
