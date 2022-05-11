@@ -525,6 +525,7 @@ MonoBehaviour:
   PlayerBank: {fileID: 428188477}
   InputAmount: {fileID: 642200210}
   WorldBank: {fileID: 1642947906}
+  gd: {fileID: 11400000, guid: b915bfe0f4c1e7548970e756a47df666, type: 2}
 --- !u!1 &634936800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,13 +2244,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 624889070}
+        m_TargetAssemblyTypeName: TestingScript, Assembly-CSharp
+        m_MethodName: WithDraw
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
