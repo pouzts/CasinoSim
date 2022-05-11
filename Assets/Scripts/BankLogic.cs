@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestingScript : MonoBehaviour
+public class BankLogic : Singleton<BankLogic>
 {
     [SerializeField] TMP_Text PlayerBank;
     [SerializeField] InputField WithdrawAmount;
