@@ -16,8 +16,12 @@ MonoBehaviour:
     values: []
   intData:
     values:
-    - key: Bank
-      value: 100000
+    - key: WorldBank
+      value: 10000
+    - key: PlayerBank
+      value: 15000
+    - key: InputAmount
+      value: 0
   floatData:
     values: []
   stringData:
