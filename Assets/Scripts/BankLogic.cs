@@ -22,7 +22,7 @@ public class BankLogic : Singleton<BankLogic>
     }
     public void Deposit()
     {
-        if (gd.intData["InputAmount"] > gd.intData["PlayerBank"])
+        if (gd.intData["InputAmount"] > gd.intData["PlayerBank"] || WithdrawAmount.text == "" || DepositAmount.text == "")
         {
             print("you stupid");
             return;
@@ -46,7 +46,7 @@ public class BankLogic : Singleton<BankLogic>
 
     public void WithDraw()
     {
-        if (gd.intData["InputAmount"] > gd.intData["WorldBank"])
+        if (gd.intData["InputAmount"] > gd.intData["WorldBank"] || WithdrawAmount.text == "" || DepositAmount.text == "")
         {
             print("you stupid");
             return;
