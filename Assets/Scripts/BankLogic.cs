@@ -35,7 +35,7 @@ public class BankLogic : Singleton<BankLogic>
         PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
 
-    private void Awake()
+    public override void Awake() 
     {
         WithdrawAmount.onValueChanged.AddListener(UpdateValue);
         //WithdrawAmount.SetTextWithoutNotify(gd.intData["InputAmount"].ToString());
