@@ -22,7 +22,7 @@ public class BankLogic : Singleton<BankLogic>
     }
     public void Deposit()
     {
-        if (gd.intData["InputAmount"] > gd.intData["PlayerBank"])
+        if (gd.intData["InputAmount"] > gd.intData["PlayerBank"] || WithdrawAmount.text == "" || DepositAmount.text == "")
         {
             print("you stupid");
             return;
@@ -35,7 +35,7 @@ public class BankLogic : Singleton<BankLogic>
         PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
 
-    private void Awake()
+    public override void Awake() 
     {
         WithdrawAmount.onValueChanged.AddListener(UpdateValue);
         //WithdrawAmount.SetTextWithoutNotify(gd.intData["InputAmount"].ToString());
@@ -46,7 +46,7 @@ public class BankLogic : Singleton<BankLogic>
 
     public void WithDraw()
     {
-        if (gd.intData["InputAmount"] > gd.intData["WorldBank"])
+        if (gd.intData["InputAmount"] > gd.intData["WorldBank"] || WithdrawAmount.text == "" || DepositAmount.text == "")
         {
             print("you stupid");
             return;
@@ -61,6 +61,7 @@ public class BankLogic : Singleton<BankLogic>
 
     private void UpdateValue(string v)
     {
-        gd.intData["InputAmount"] = int.Parse(v);
+        if (int.TryParse(v, out int val))
+            gd.intData["InputAmount"] = val;
     }
 }
