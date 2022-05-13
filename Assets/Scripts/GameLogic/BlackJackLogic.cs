@@ -5,6 +5,8 @@ using UnityEngine;
 public class BlackJackLogic : Singleton<BlackJackLogic>
 {
 
+
+
     int bet;
 
     eGameState gameState;
@@ -59,6 +61,7 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
 
     void DealCards()
     {
+        
 
     }
 
