@@ -61,6 +61,7 @@ public class BankLogic : Singleton<BankLogic>
 
     private void UpdateValue(string v)
     {
-        gd.intData["InputAmount"] = int.Parse(v);
+        if (int.TryParse(v, out int val))
+            gd.intData["InputAmount"] = val;
     }
 }
