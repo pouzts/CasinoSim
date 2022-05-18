@@ -29,7 +29,7 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     // Update is called once per frame
     void Update()
     {
-        switch (gameState)
+        /*switch (gameState)
         {
             case eGameState.PLACE_BETS:
                 PlaceBets();
@@ -50,10 +50,10 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
                 GameLost();
                 break;
 
-        }
+        }*/
     }
 
-    void PlaceBets()
+    void PlaceBets(int betAmmount)
     {
         //enable chip buttons
         //enable "place bet" button
