@@ -30,4 +30,20 @@ public class Deck : MonoBehaviour
             DiscardPile.Add(card);
         }
     }
+
+    public void ResetDeck()
+    {
+        foreach (var card in DiscardPile)
+        {
+            MainDeck.Add(card);
+            DiscardPile.Remove(card);
+        }
+        foreach (var card in ActiveHand)
+        {
+            MainDeck.Add(card);
+            ActiveHand.Remove(card);
+        }
+        ActiveHand.Clear();
+        DiscardPile.Clear();
+    }
 }
