@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BlackJackLogic : Singleton<BlackJackLogic>
 {
+    [SerializeField] TMP_Text currentBet;
+    [SerializeField] GameObject playerHandPanel;
+    Deck deck;
 
+    List<Card> dealerHand = new List<Card>();
+    List<Card> playerHand = new List<Card>();
 
-
+    int playerHandVal;
     int bet;
 
     eGameState gameState;
@@ -29,6 +35,8 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     // Update is called once per frame
     void Update()
     {
+        currentBet.text = bet.ToString();
+
         /*switch (gameState)
         {
             case eGameState.PLACE_BETS:
@@ -57,12 +65,12 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     {
         //enable chip buttons
         //enable "place bet" button
+        bet += betAmmount;
     }
 
     void DealCards()
     {
-        
-
+        //dealerHand.Add(deck.DrawCard());
     }
 
     void PlayerTurn()

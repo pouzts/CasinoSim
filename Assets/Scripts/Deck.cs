@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    public List<Card> MainDeck = new List<Card>();
+    public List<GameObject> MainDeck = new List<GameObject>();
     public List<Card> DiscardPile = new List<Card>();
     public List<Card> ActiveHand = new List<Card>();
 
-    public void DrawCard()
+    public GameObject DrawCard()
     {
         int cardDraw = Random.Range(0, MainDeck.Count - 1);
         if (MainDeck.Count == 0)
         {
             print("you stupid bum, there ain't no cards");
-            return;
+            return null;
         }
-            Card card = MainDeck[cardDraw];
-            MainDeck.RemoveAt(cardDraw);
-            ActiveHand.Add(card);
+        
+        GameObject card = MainDeck[cardDraw];
+        MainDeck.RemoveAt(cardDraw);
+        //ActiveHand.Add(card);
+
+        return card;
     }
 
     public void DiscardHand()
