@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    public List<Card> MainDeck = new List<Card>();
-    public List<Card> DiscardPile = new List<Card>();
-    public List<Card> ActiveHand = new List<Card>();
+    public List<GameObject> MainDeck = new List<GameObject>();
+    public List<GameObject> DiscardPile = new List<GameObject>();
+    public List<GameObject> ActiveHand = new List<GameObject>();
 
     public void DrawCard()
     {
@@ -16,7 +16,7 @@ public class Deck : MonoBehaviour
             print("you stupid bum, there ain't no cards");
             return;
         }
-            Card card = MainDeck[cardDraw];
+            var card = MainDeck[cardDraw];
             MainDeck.RemoveAt(cardDraw);
             ActiveHand.Add(card);
     }
@@ -25,7 +25,7 @@ public class Deck : MonoBehaviour
     {
         for (int i = 0; i < ActiveHand.Count; i++)
         {
-            Card card = ActiveHand[i];
+            var card = ActiveHand[i];
             ActiveHand.RemoveAt(i);
             DiscardPile.Add(card);
         }
