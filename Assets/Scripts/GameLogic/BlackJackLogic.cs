@@ -6,16 +6,17 @@ using UnityEngine;
 public class BlackJackLogic : Singleton<BlackJackLogic>
 {
     [SerializeField] TMP_Text currentBet;
+    [SerializeField] GameObject dealerHandPanel;
     [SerializeField] GameObject playerHandPanel;
     Deck deck;
 
-    List<Card> dealerHand = new List<Card>();
-    List<Card> playerHand = new List<Card>();
+    List<GameObject> dealerHand = new List<GameObject>();
+    List<GameObject> playerHand = new List<GameObject>();
 
     int playerHandVal;
     int bet;
 
-    eGameState gameState;
+    //eGameState gameState;
 
     public enum eGameState
     {
@@ -29,7 +30,7 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
 
     private void Start()
     {
-        gameState = eGameState.PLACE_BETS;
+        //gameState = eGameState.PLACE_BETS;
     }
 
     // Update is called once per frame
@@ -70,7 +71,18 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
 
     void DealCards()
     {
-        //dealerHand.Add(deck.DrawCard());
+        GameObject card1 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+        GameObject card2 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+
+
+
+        dealerHand.Add(card1);
+        dealerHand.Add(card2);
+
+        card1 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+        card2 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+        dealerHand.Add(card1);
+        dealerHand.Add(card2);
     }
 
     void PlayerTurn()
