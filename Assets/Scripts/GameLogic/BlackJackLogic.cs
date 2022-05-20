@@ -8,6 +8,8 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     [SerializeField] TMP_Text currentBet;
     [SerializeField] GameObject dealerHandPanel;
     [SerializeField] GameObject playerHandPanel;
+    [SerializeField] Sprite faceDownCard;
+
     Deck deck;
 
     List<GameObject> dealerHand = new List<GameObject>();
@@ -62,11 +64,18 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         }*/
     }
 
-    void PlaceBets(int betAmmount)
+    void PlaceBets()
     {
         //enable chip buttons
         //enable "place bet" button
+
+        int betAmmount = int.Parse(currentBet.text);
         bet += betAmmount;
+    }
+
+    void AddToBet(int value)
+    {
+        currentBet.text = value.ToString();
     }
 
     void DealCards()
@@ -74,7 +83,7 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         GameObject card1 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
         GameObject card2 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
 
-
+        card1.GetComponent<SpriteRenderer>().sprite = faceDownCard;
 
         dealerHand.Add(card1);
         dealerHand.Add(card2);
