@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BlackJackLogic : Singleton<BlackJackLogic>
 {
     [SerializeField] TMP_Text currentBet;
     [SerializeField] GameObject dealerHandPanel;
     [SerializeField] GameObject playerHandPanel;
-    [SerializeField] Texture faceDownCard;
-
-    public GameObject deck;
+    Deck deck;
 
     List<GameObject> dealerHand = new List<GameObject>();
     List<GameObject> playerHand = new List<GameObject>();
@@ -65,36 +62,25 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         }*/
     }
 
-    public void PlaceBets()
+    void PlaceBets(int betAmmount)
     {
         //enable chip buttons
         //enable "place bet" button
-
-        //int betAmmount = int.Parse(currentBet.text);
-        //bet += betAmmount;
-
-        DealCards();
-
+        bet += betAmmount;
     }
 
-    public void AddToBet(int value)
+    void DealCards()
     {
-        bet += value;
-        currentBet.text = "$" + bet.ToString();
-    }
+        GameObject card1 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+        GameObject card2 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
 
-    public void DealCards()
-    {
-        GameObject card1 = Instantiate(deck.GetComponent<Deck>().DrawCard(), dealerHandPanel.transform);
-        GameObject card2 = Instantiate(deck.GetComponent<Deck>().DrawCard(), dealerHandPanel.transform);
 
-        card1.GetComponent<RawImage>().texture = faceDownCard;
 
         dealerHand.Add(card1);
         dealerHand.Add(card2);
 
-        card1 = Instantiate(deck.GetComponent<Deck>().DrawCard(), playerHandPanel.transform);
-        card2 = Instantiate(deck.GetComponent<Deck>().DrawCard(), playerHandPanel.transform);
+        card1 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
+        card2 = Instantiate(deck.DrawCard(), dealerHandPanel.transform);
         dealerHand.Add(card1);
         dealerHand.Add(card2);
     }

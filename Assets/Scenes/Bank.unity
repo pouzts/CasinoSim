@@ -2593,7 +2593,7 @@ GameObject:
   - component: {fileID: 1052761771}
   - component: {fileID: 1052761770}
   m_Layer: 0
-  m_Name: BankManager
+  m_Name: KillMe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

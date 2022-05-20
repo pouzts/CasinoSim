@@ -19,9 +19,9 @@ MonoBehaviour:
     - key: WorldBank
       value: 10000
     - key: PlayerBank
-      value: 10000
+      value: 15000
     - key: InputAmount
-      value: 5000
+      value: 0
   floatData:
     values: []
   stringData:
