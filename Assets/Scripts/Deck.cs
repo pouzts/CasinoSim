@@ -8,17 +8,18 @@ public class Deck : MonoBehaviour
     public List<GameObject> DiscardPile = new List<GameObject>();
     public List<GameObject> ActiveHand = new List<GameObject>();
 
-    public void DrawCard()
+    public GameObject DrawCard()
     {
         int cardDraw = Random.Range(0, MainDeck.Count - 1);
         if (MainDeck.Count == 0)
         {
             print("you stupid bum, there ain't no cards");
-            return;
+            return null;
         }
             var card = MainDeck[cardDraw];
             MainDeck.RemoveAt(cardDraw);
             ActiveHand.Add(card);
+        return card;
     }
 
     public void DiscardHand()
