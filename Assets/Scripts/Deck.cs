@@ -19,7 +19,6 @@ public class Deck : MonoBehaviour
 
         var card = MainDeck[cardDraw];
         MainDeck.RemoveAt(cardDraw);
-        //ActiveHand.Add(card);
         return card;
     }
 
