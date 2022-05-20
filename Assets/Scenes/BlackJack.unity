@@ -629,10 +629,10 @@ RectTransform:
   m_Father: {fileID: 1127857004}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -243}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -245}
+  m_SizeDelta: {x: -1820, y: -910}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &365648904
 MonoBehaviour:
@@ -651,10 +651,17 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
+<<<<<<< HEAD
   m_ChildAlignment: 3
   m_Spacing: -75
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
+=======
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+>>>>>>> ba907cf1756ae544fefb3ddc4e4800aac7e38186
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -2668,7 +2675,6 @@ GameObject:
   - component: {fileID: 1127857003}
   - component: {fileID: 1127857002}
   - component: {fileID: 1127857001}
-  - component: {fileID: 1127857005}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2770,6 +2776,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!114 &1127857005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2787,6 +2794,8 @@ MonoBehaviour:
   playerHandPanel: {fileID: 365648902}
   faceDownCard: {fileID: 2800000, guid: 3a2080895f86e1f44832fe1651414f7e, type: 3}
   deck: {fileID: 3801774015729783379, guid: 382c268588b9a8142b6b3c7966b8a980, type: 3}
+=======
+>>>>>>> ba907cf1756ae544fefb3ddc4e4800aac7e38186
 --- !u!1 &1211826541
 GameObject:
   m_ObjectHideFlags: 0
