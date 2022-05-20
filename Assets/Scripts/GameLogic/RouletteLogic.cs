@@ -98,7 +98,7 @@ public class RouletteLogic : MonoBehaviour
             //player selected color = winningPiece.color
             if (selectedColor == winningPiece.color)
             {
-                gd.intData["PlayerBank"] += (2 * betAmount);
+                gd.intData["PlayerBank"] += Utilities.Payout(betAmount, 1);
                 print("win");
             }
             else
