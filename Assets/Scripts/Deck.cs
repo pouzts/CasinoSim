@@ -16,9 +16,16 @@ public class Deck : MonoBehaviour
             print("you stupid bum, there ain't no cards");
             return null;
         }
+<<<<<<< HEAD
             var card = MainDeck[cardDraw];
             MainDeck.RemoveAt(cardDraw);
             ActiveHand.Add(card);
+=======
+
+        var card = MainDeck[cardDraw];
+        MainDeck.RemoveAt(cardDraw);
+        //ActiveHand.Add(card);
+>>>>>>> 90b8e70000f68c3256f1b0d924063d6bd472a872
         return card;
     }
 
