@@ -35,5 +35,6 @@ public class RouletteButtonScript : MonoBehaviour
 public enum RoulettePieceColor
 {
     red = 1,
-    black = 0
+    black = 0,
+    noColor = 2
 }

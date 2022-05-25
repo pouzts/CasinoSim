@@ -17,7 +17,7 @@ public class RouletteLogic : MonoBehaviour
 
     RoulettePiece winningPiece;
 
-    Color selectedColor = Color.blue;
+    RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
 
     [SerializeField] TMP_Text PlayerBank;
     [SerializeField] TMP_Text InputAmount;
@@ -28,12 +28,15 @@ public class RouletteLogic : MonoBehaviour
     //generate list
     private void Start()
     {
-        for (int i = 0; i < 36; i++)
+
+        
+
+        /*for (int i = 0; i < 36; i++)
         {
             RoulettePiece roulette = new RoulettePiece();
             roulette.value = i + 1;
-            //RouletteList.Add(roulette);
-        }
+            RouletteList.Add(roulette);
+        }*/
         /*RouletteList[0].color = Color.red;
         RouletteList[1].color = Color.black;
         RouletteList[2].color = Color.red;
@@ -75,6 +78,16 @@ public class RouletteLogic : MonoBehaviour
         betAmount = 0;
     }
 
+    public int CheckRoulettePiece()
+    {
+        foreach (var item in RouletteList)
+        {
+            if (item.GetComponent<RouletteButtonScript>().IsTrue)
+                print(item.GetComponent<RouletteButtonScript>().Val + " was true");
+        }
+
+        return 0;
+    }
 
     public void SpinWheel()
     {
@@ -83,7 +96,7 @@ public class RouletteLogic : MonoBehaviour
             print("Can't bet anymore");
             return;
         }
-        else if (selectedColor == Color.blue)
+        else if (selectedColor == RoulettePieceColor.noColor)
         {
             print("no color selected");
             return;
@@ -94,10 +107,10 @@ public class RouletteLogic : MonoBehaviour
             int roll = Random.Range(0, 35);
             //winingPiece = list[rand]
             var winningPiece = RouletteList[roll];
-            //print("piece value:" + winningPiece.value + "piece color:" + winningPiece.color.ToString());
+            print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());
 
             //player selected color = winningPiece.color
-            /*if (selectedColor == winningPiece.color)
+            if (selectedColor == winningPiece.GetComponent<RouletteButtonScript>().Color)
             {
                 gd.intData["PlayerBank"] += Utilities.Payout(betAmount, 1);
                 print("win");
@@ -105,11 +118,13 @@ public class RouletteLogic : MonoBehaviour
             else
             {
                 print("lose");
-            }*/
+            }
 
             PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
             betAmount = 0;
             InputAmount.text = "$" + betAmount;
+
+            CheckRoulettePiece();
         }
 
     }
@@ -119,11 +134,11 @@ public class RouletteLogic : MonoBehaviour
         switch (choice)
         {
             case 0:
-                selectedColor = Color.red;
+                selectedColor = RoulettePieceColor.red;
                 print("red color selected");
                 break;
             case 1:
-                selectedColor = Color.black;
+                selectedColor = RoulettePieceColor.black;
                 print("black color selected");
                 break;
         }
