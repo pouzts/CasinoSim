@@ -10,13 +10,6 @@ public class RoulettePiece
     string colorString;
 }
 
-public class RoulettePieceButton
-{
-    public bool IsTrue { get; set; }
-    public int Val { get; set; }
-    public Color Color { get; set; }
-}
-
 public class RouletteLogic : MonoBehaviour
 {
     //list of roulette pieces
