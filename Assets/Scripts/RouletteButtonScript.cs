@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoulettePieceButton
+public class RouletteButtonScript : MonoBehaviour
 {
-    public bool IsTrue { get; set; }
-    public int Val { get; set; }
-    public RoulettePieceColor Color { get; set; }
+    public bool IsTrue = false;
+    public int Val;
+    public RoulettePieceColor Color;
 }
 
 
