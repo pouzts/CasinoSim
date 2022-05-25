@@ -9,10 +9,11 @@ public class RoulettePiece
     public Color color;
     string colorString;
 }
+
 public class RouletteLogic : MonoBehaviour
 {
     //list of roulette pieces
-    List<RoulettePiece> RouletteList = new List<RoulettePiece>();
+    public List<GameObject> RouletteList = new List<GameObject>();
 
     RoulettePiece winningPiece;
 
@@ -31,9 +32,9 @@ public class RouletteLogic : MonoBehaviour
         {
             RoulettePiece roulette = new RoulettePiece();
             roulette.value = i + 1;
-            RouletteList.Add(roulette);
+            //RouletteList.Add(roulette);
         }
-        RouletteList[0].color = Color.red;
+        /*RouletteList[0].color = Color.red;
         RouletteList[1].color = Color.black;
         RouletteList[2].color = Color.red;
         RouletteList[3].color = Color.black;
@@ -68,7 +69,7 @@ public class RouletteLogic : MonoBehaviour
         RouletteList[32].color = Color.black;
         RouletteList[33].color = Color.red;
         RouletteList[34].color = Color.black;
-        RouletteList[35].color = Color.red;
+        RouletteList[35].color = Color.red;*/
 
         PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
         betAmount = 0;
@@ -77,12 +78,12 @@ public class RouletteLogic : MonoBehaviour
 
     public void SpinWheel()
     {
-        if(gd.intData["PlayerBank"] < 0)
+        if (gd.intData["PlayerBank"] < 0)
         {
             print("Can't bet anymore");
             return;
         }
-        else if(selectedColor == Color.blue)
+        else if (selectedColor == Color.blue)
         {
             print("no color selected");
             return;
@@ -93,10 +94,10 @@ public class RouletteLogic : MonoBehaviour
             int roll = Random.Range(0, 35);
             //winingPiece = list[rand]
             var winningPiece = RouletteList[roll];
-            print("piece value:" + winningPiece.value + "piece color:" + winningPiece.color.ToString());
+            //print("piece value:" + winningPiece.value + "piece color:" + winningPiece.color.ToString());
 
             //player selected color = winningPiece.color
-            if (selectedColor == winningPiece.color)
+            /*if (selectedColor == winningPiece.color)
             {
                 gd.intData["PlayerBank"] += Utilities.Payout(betAmount, 1);
                 print("win");
@@ -104,7 +105,7 @@ public class RouletteLogic : MonoBehaviour
             else
             {
                 print("lose");
-            }
+            }*/
 
             PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
             betAmount = 0;
@@ -129,14 +130,14 @@ public class RouletteLogic : MonoBehaviour
     }
     public void AddBetAmount(int input)
     {
-        if(gd.intData["PlayerBank"] < 0)
+        if (gd.intData["PlayerBank"] < 0)
         {
             print("Can't bet anymore");
             return;
         }
         else
         {
-            if(input > gd.intData["PlayerBank"])
+            if (input > gd.intData["PlayerBank"])
             {
                 print("Can't bet anymore");
                 return;
