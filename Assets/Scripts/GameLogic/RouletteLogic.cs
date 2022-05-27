@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoulettePiece
 {
@@ -10,14 +11,18 @@ public class RoulettePiece
     string colorString;
 }
 
-public class RouletteLogic : MonoBehaviour
-{
+public class RouletteLogic : Singleton<RouletteLogic>
+{ 
     //list of roulette pieces
     public List<GameObject> RouletteList = new List<GameObject>();
+    List<GameObject> selectedSpots = new List<GameObject>();
 
     RoulettePiece winningPiece;
 
     RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
+
+    public Sprite dead;
+    public int chipValue;
 
     [SerializeField] TMP_Text PlayerBank;
     [SerializeField] TMP_Text InputAmount;
@@ -78,15 +83,21 @@ public class RouletteLogic : MonoBehaviour
         betAmount = 0;
     }
 
+    private void Update()
+    {
+        
+    }
+
     public int CheckRoulettePiece()
     {
         foreach (var item in RouletteList)
         {
             if (item.GetComponent<RouletteButtonScript>().IsTrue)
                 print(item.GetComponent<RouletteButtonScript>().Val + " was true");
+                selectedSpots.Add(item);
         }
 
-        return 0;
+        return selectedSpots.Count;
     }
 
     public void SpinWheel()
@@ -96,11 +107,6 @@ public class RouletteLogic : MonoBehaviour
             print("Can't bet anymore");
             return;
         }
-        else if (selectedColor == RoulettePieceColor.noColor)
-        {
-            print("no color selected");
-            return;
-        }
         else
         {
             //get random number 0 - 35
@@ -108,6 +114,50 @@ public class RouletteLogic : MonoBehaviour
             //winingPiece = list[rand]
             var winningPiece = RouletteList[roll];
             print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());
+
+/*            foreach (var spot in RouletteList)
+            {
+                if (spot.GetComponent<RouletteButtonScript>().IsTrue)
+                {
+                    selectedSpots.Add(spot);
+                }
+            }*/
+
+            for (int i = 0; i < selectedSpots.Count; i++)
+            {
+                if(selectedSpots[i].GetComponent<RouletteButtonScript>().Val == winningPiece.GetComponent<RouletteButtonScript>().Val && selectedSpots[i].GetComponent<RouletteButtonScript>().Color == winningPiece.GetComponent<RouletteButtonScript>().Color)
+                {
+                    if (CheckRoulettePiece() == 1)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 35);
+                    }
+                    else if (CheckRoulettePiece() == 2)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 17);
+                    }
+                    else if (CheckRoulettePiece() == 3)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 11);
+                    }
+                    else if (CheckRoulettePiece() == 4)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 8);
+                    }
+                    else if (CheckRoulettePiece() == 5)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 6);
+                    }
+                    else if (CheckRoulettePiece() == 6)
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 5);
+                    }
+                    else
+                    {
+                        gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 1);
+                    }
+
+                }
+            }
 
             //player selected color = winningPiece.color
             if (selectedColor == winningPiece.GetComponent<RouletteButtonScript>().Color)
@@ -143,7 +193,7 @@ public class RouletteLogic : MonoBehaviour
                 break;
         }
     }
-    public void AddBetAmount(int input)
+    public void SetBetAmount(int input)
     {
         if (gd.intData["PlayerBank"] < 0)
         {
@@ -157,11 +207,17 @@ public class RouletteLogic : MonoBehaviour
                 print("Can't bet anymore");
                 return;
             }
-            gd.intData["PlayerBank"] -= input;
+            chipValue = input;
+/*            //gd.intData["PlayerBank"] -= input;
             PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
-            betAmount += input;
-            InputAmount.text = "$" + betAmount;
+            //betAmount += input;
+            InputAmount.text = "$" + betAmount;*/
         }
 
+    }
+
+    public void SetSprite(Sprite sprite)
+    {
+        dead = sprite;
     }
 }

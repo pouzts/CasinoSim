@@ -12,20 +12,25 @@ public class RouletteButtonScript : MonoBehaviour
 
     public void OnClick()
     {
-        var tempColor = gameObject.GetComponent<RawImage>().color;
+        var temp = GetComponent<Image>();
+        var tempAlpha = GetComponent<Image>().color;
 
         if (IsTrue)
         {
-            tempColor.a = 0f;
-            gameObject.GetComponent<RawImage>().color = tempColor;
+            tempAlpha.a = 0;
+            gameObject.GetComponent<Image>().color = tempAlpha;
             IsTrue = false;
+            betVal = 0;
         }
             
         else
         {
-            tempColor.a = 255f;
-            gameObject.GetComponent<RawImage>().color = tempColor;
+            tempAlpha.a = 255f;
+            temp.sprite = RouletteLogic.Instance.dead;
+            gameObject.GetComponent<Image>().sprite = temp.sprite;
+            gameObject.GetComponent<Image>().color = tempAlpha;
             IsTrue = true;
+            betVal = RouletteLogic.Instance.chipValue;
         }
     }
 
