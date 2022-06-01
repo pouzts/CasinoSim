@@ -18,6 +18,7 @@ public class Deck : MonoBehaviour
         }
 
         var card = MainDeck[cardDraw];
+        DiscardPile.Add(card);
         MainDeck.RemoveAt(cardDraw);
         return card;
     }
@@ -34,7 +35,13 @@ public class Deck : MonoBehaviour
 
     public void ResetDeck()
     {
-        foreach (var card in DiscardPile)
+        while (DiscardPile.Count != 0)
+        {
+            MainDeck.Add(DiscardPile[0]);
+            DiscardPile.RemoveAt(0);
+        }
+
+        /*foreach (var card in DiscardPile)
         {
             MainDeck.Add(card);
             DiscardPile.Remove(card);
@@ -43,7 +50,7 @@ public class Deck : MonoBehaviour
         {
             MainDeck.Add(card);
             ActiveHand.Remove(card);
-        }
+        }*/
         ActiveHand.Clear();
         DiscardPile.Clear();
     }
