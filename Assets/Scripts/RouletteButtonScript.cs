@@ -10,27 +10,65 @@ public class RouletteButtonScript : MonoBehaviour
     public RoulettePieceColor Color;
     public int betVal;
 
+
     public void OnClick()
     {
         var temp = GetComponent<Image>();
         var tempAlpha = GetComponent<Image>().color;
-
-        if (IsTrue)
+        if (RouletteLogic.Instance.gd.intData["PlayerBank"] < 0)
         {
-            tempAlpha.a = 0;
-            gameObject.GetComponent<Image>().color = tempAlpha;
-            IsTrue = false;
-            betVal = 0;
+            print("Can't bet anymore");
+            return;
         }
-            
         else
         {
-            tempAlpha.a = 255f;
-            temp.sprite = RouletteLogic.Instance.dead;
-            gameObject.GetComponent<Image>().sprite = temp.sprite;
-            gameObject.GetComponent<Image>().color = tempAlpha;
-            IsTrue = true;
-            betVal = RouletteLogic.Instance.chipValue;
+            if (IsTrue)
+            {
+                tempAlpha.a = 0;
+                gameObject.GetComponent<Image>().color = tempAlpha;
+                IsTrue = false;
+                RouletteLogic.Instance.gd.intData["PlayerBank"] += betVal;
+                betVal = 0;
+                //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
+            }
+            
+            else
+            {
+                tempAlpha.a = 255f;
+                temp.sprite = RouletteLogic.Instance.dead;
+                gameObject.GetComponent<Image>().sprite = temp.sprite;
+                gameObject.GetComponent<Image>().color = tempAlpha;
+                IsTrue = true;
+                betVal = RouletteLogic.Instance.chipValue;
+                RouletteLogic.Instance.gd.intData["PlayerBank"] -= betVal;
+                //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
+            }
+        }
+
+    }
+
+    public void ResetButton()
+    {
+        var tempAlpha = GetComponent<Image>().color;
+        IsTrue = false;
+        betVal = 0;
+        tempAlpha.a = 0;
+        gameObject.GetComponent<Image>().color = tempAlpha;
+        //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
+    }
+
+    public void SetSelectedColor(int choice)
+    {
+        switch (choice)
+        {
+            case 0:
+                RouletteLogic.Instance.selectedColor = RoulettePieceColor.red;
+                print("red color selected");
+                break;
+            case 1:
+                RouletteLogic.Instance.selectedColor = RoulettePieceColor.black;
+                print("black color selected");
+                break;
         }
     }
 

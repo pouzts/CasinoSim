@@ -19,7 +19,7 @@ public class RouletteLogic : Singleton<RouletteLogic>
 
     RoulettePiece winningPiece;
 
-    RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
+    public RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
 
     public Sprite dead;
     public int chipValue;
@@ -85,7 +85,8 @@ public class RouletteLogic : Singleton<RouletteLogic>
 
     private void Update()
     {
-        
+        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+        betAmount = 0;
     }
 
     public void CheckRoulettePiece()
@@ -116,13 +117,13 @@ public class RouletteLogic : Singleton<RouletteLogic>
             print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());            
             CheckRoulettePiece();
 
-            foreach (var spot in RouletteList)
+            /*foreach (var spot in RouletteList)
             {
                 if (spot.GetComponent<RouletteButtonScript>().IsTrue == true)
                 {
                     gd.intData["PlayerBank"] -= spot.GetComponent<RouletteButtonScript>().betVal;
                 }
-            }
+            }*/
 
             for (int i = 0; i < selectedSpots.Count; i++)
             {
@@ -176,25 +177,12 @@ public class RouletteLogic : Singleton<RouletteLogic>
             PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
             //betAmount = 0;
             InputAmount.text = "$" + betAmount;
-
-
+            foreach(var lol in RouletteList)
+            {
+                lol.GetComponent<RouletteButtonScript>().ResetButton();
+            }
         }
 
-    }
-
-    public void SetSelectedColor(int choice)
-    {
-        switch (choice)
-        {
-            case 0:
-                selectedColor = RoulettePieceColor.red;
-                print("red color selected");
-                break;
-            case 1:
-                selectedColor = RoulettePieceColor.black;
-                print("black color selected");
-                break;
-        }
     }
     public void SetBetAmount(int input)
     {
