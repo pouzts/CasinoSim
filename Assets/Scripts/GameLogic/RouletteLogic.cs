@@ -88,16 +88,16 @@ public class RouletteLogic : Singleton<RouletteLogic>
         
     }
 
-    public int CheckRoulettePiece()
+    public void CheckRoulettePiece()
     {
         foreach (var item in RouletteList)
         {
-            if (item.GetComponent<RouletteButtonScript>().IsTrue)
+            if (item.GetComponent<RouletteButtonScript>().IsTrue == true)
+            {
                 print(item.GetComponent<RouletteButtonScript>().Val + " was true");
                 selectedSpots.Add(item);
+            }
         }
-
-        return selectedSpots.Count;
     }
 
     public void SpinWheel()
@@ -113,41 +113,42 @@ public class RouletteLogic : Singleton<RouletteLogic>
             int roll = Random.Range(0, 35);
             //winingPiece = list[rand]
             var winningPiece = RouletteList[roll];
-            print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());
+            print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());            
+            CheckRoulettePiece();
 
-/*            foreach (var spot in RouletteList)
+            foreach (var spot in RouletteList)
             {
-                if (spot.GetComponent<RouletteButtonScript>().IsTrue)
+                if (spot.GetComponent<RouletteButtonScript>().IsTrue == true)
                 {
-                    selectedSpots.Add(spot);
+                    gd.intData["PlayerBank"] -= spot.GetComponent<RouletteButtonScript>().betVal;
                 }
-            }*/
+            }
 
             for (int i = 0; i < selectedSpots.Count; i++)
             {
-                if(selectedSpots[i].GetComponent<RouletteButtonScript>().Val == winningPiece.GetComponent<RouletteButtonScript>().Val && selectedSpots[i].GetComponent<RouletteButtonScript>().Color == winningPiece.GetComponent<RouletteButtonScript>().Color)
+                if (selectedSpots[i].GetComponent<RouletteButtonScript>().Val == winningPiece.GetComponent<RouletteButtonScript>().Val && selectedSpots[i].GetComponent<RouletteButtonScript>().Color == winningPiece.GetComponent<RouletteButtonScript>().Color)
                 {
-                    if (CheckRoulettePiece() == 1)
+                    if (selectedSpots.Count == 1)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 35);
                     }
-                    else if (CheckRoulettePiece() == 2)
+                    else if (selectedSpots.Count == 2)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 17);
                     }
-                    else if (CheckRoulettePiece() == 3)
+                    else if (selectedSpots.Count == 3)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 11);
                     }
-                    else if (CheckRoulettePiece() == 4)
+                    else if (selectedSpots.Count == 4)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 8);
                     }
-                    else if (CheckRoulettePiece() == 5)
+                    else if (selectedSpots.Count == 5)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 6);
                     }
-                    else if (CheckRoulettePiece() == 6)
+                    else if (selectedSpots.Count == 6)
                     {
                         gd.intData["PlayerBank"] += Utilities.Payout(selectedSpots[i].GetComponent<RouletteButtonScript>().betVal, 5);
                     }
@@ -158,6 +159,8 @@ public class RouletteLogic : Singleton<RouletteLogic>
 
                 }
             }
+
+            print(selectedSpots.Count);
 
             //player selected color = winningPiece.color
             if (selectedColor == winningPiece.GetComponent<RouletteButtonScript>().Color)
@@ -171,10 +174,10 @@ public class RouletteLogic : Singleton<RouletteLogic>
             }
 
             PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
-            betAmount = 0;
+            //betAmount = 0;
             InputAmount.text = "$" + betAmount;
 
-            CheckRoulettePiece();
+
         }
 
     }
