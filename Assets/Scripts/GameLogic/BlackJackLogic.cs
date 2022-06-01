@@ -13,6 +13,7 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     [SerializeField] GameObject PlayerHandPanel;
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
+    [SerializeField] GameObject DrawPanel;
     [SerializeField] GameObject Chips;
     [SerializeField] GameObject Hit;
     [SerializeField] GameObject Stand;
@@ -158,14 +159,13 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         else
         {
             Win win = CheckForWin();
-            if (win.True)
+            if (win.True && win.payout == 0)
+            {
+                GameDraw();
+            }
+            else if (win.True)
             {
                 GameWon(win.payout);
-            }
-            else
-            {
-                turnCount++;
-                DealerTurn();
             }
         }
         
@@ -195,7 +195,11 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         }
 
         Win win = CheckForWin();
-        if (win.True)
+        if (win.True && win.payout == 0)
+        {
+            GameDraw();
+        }
+        else if (win.True)
         {
             GameWon(win.payout);
         }
@@ -211,9 +215,13 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
         {
             LosePanel.SetActive(false);
         }
-        else
+        else if(panel == 1)
         {
             WinPanel.SetActive(false);
+        }
+        else if (panel == 2)
+        {
+            DrawPanel.SetActive(false);
         }
 
         Restart();
@@ -347,13 +355,18 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
                 win.True = true;
                 win.payout = 1;
             }
+            else if (playerHandVal == dealerHandVal)
+            {
+                win.True = true;
+                win.payout = 0;
+            }
 
             if (dealerHandVal > 21)
             {
                 win.True = true;
                 win.payout = 1;
             }
-            
+
         }
 
         if (playerHand.Count >= 5)
@@ -376,5 +389,12 @@ public class BlackJackLogic : Singleton<BlackJackLogic>
     {
         //enable loose panel
         LosePanel.SetActive(true);
+    }
+
+    void GameDraw()
+    {
+        //enable draw pannel
+        DrawPanel.SetActive(true); 
+        gameData.intData["PlayerBank"] += bet;
     }
 }
