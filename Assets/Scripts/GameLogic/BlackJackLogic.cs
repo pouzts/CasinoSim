@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BlackJackLogic : Singleton<BlackJackLogic>
+public class BlackJackLogic : MonoBehaviour
 {
     [SerializeField] TMP_Text CurrentBet;
     [SerializeField] TMP_Text PlayerMoney;
