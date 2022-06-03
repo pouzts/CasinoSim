@@ -100,9 +100,19 @@ public class RouletteLogic : MonoBehaviour
         return gd.intData["PlayerBank"];
     }
 
-    public void UpdatePlayerBank()
+    public void UpdatePlayerBank(GameObject gameObject)
     {
-        //gd.intData["PlayerBank"] += ;
+        print("this object was selected");
+        switch (gameObject.GetComponent<RouletteButtonScript>().IsTrue)
+        {
+            case true:
+                gd.intData["PlayerBank"] -= gameObject.GetComponent<RouletteButtonScript>().betVal;
+                break;
+            case false:
+                gd.intData["PlayerBank"] += gameObject.GetComponent<RouletteButtonScript>().betVal;
+                gameObject.GetComponent<RouletteButtonScript>().betVal = 0;
+                break;
+        }
         PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
 

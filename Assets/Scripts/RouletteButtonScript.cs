@@ -28,7 +28,7 @@ public class RouletteButtonScript : MonoBehaviour
                 gameObject.GetComponent<Image>().color = tempAlpha;
                 IsTrue = false;
                 //RouletteLogic.gd.intData["PlayerBank"] += betVal;
-                betVal = 0;
+                //betVal = 0;
                 //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
             }
             
