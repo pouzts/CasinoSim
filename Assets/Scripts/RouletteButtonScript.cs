@@ -15,19 +15,19 @@ public class RouletteButtonScript : MonoBehaviour
     {
         var temp = GetComponent<Image>();
         var tempAlpha = GetComponent<Image>().color;
-        if (RouletteLogic.Instance.gd.intData["PlayerBank"] < 0)
+/*        if (RouletteLogic.GetPlayerBank() < 0)
         {
             print("Can't bet anymore");
             return;
-        }
-        else
-        {
+        }*/
+/*        else
+        {*/
             if (IsTrue)
             {
                 tempAlpha.a = 0;
                 gameObject.GetComponent<Image>().color = tempAlpha;
                 IsTrue = false;
-                RouletteLogic.Instance.gd.intData["PlayerBank"] += betVal;
+                //RouletteLogic.gd.intData["PlayerBank"] += betVal;
                 betVal = 0;
                 //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
             }
@@ -35,15 +35,16 @@ public class RouletteButtonScript : MonoBehaviour
             else
             {
                 tempAlpha.a = 255f;
-                temp.sprite = RouletteLogic.Instance.dead;
+                temp.sprite = RouletteLogic.GetCurrentChip();
                 gameObject.GetComponent<Image>().sprite = temp.sprite;
                 gameObject.GetComponent<Image>().color = tempAlpha;
                 IsTrue = true;
-                betVal = RouletteLogic.Instance.chipValue;
-                RouletteLogic.Instance.gd.intData["PlayerBank"] -= betVal;
+                betVal = RouletteLogic.GetChipValue();
+                //RouletteLogic.gd.intData["PlayerBank"] -= betVal;
                 //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
             }
-        }
+        //}
+
 
     }
 
@@ -55,21 +56,6 @@ public class RouletteButtonScript : MonoBehaviour
         tempAlpha.a = 0;
         gameObject.GetComponent<Image>().color = tempAlpha;
         //RouletteLogic.Instance.PlayerBank.text = "$" + RouletteLogic.Instance.gd.intData["PlayerBank"].ToString();
-    }
-
-    public void SetSelectedColor(int choice)
-    {
-        switch (choice)
-        {
-            case 0:
-                RouletteLogic.Instance.selectedColor = RoulettePieceColor.red;
-                print("red color selected");
-                break;
-            case 1:
-                RouletteLogic.Instance.selectedColor = RoulettePieceColor.black;
-                print("black color selected");
-                break;
-        }
     }
 
 }

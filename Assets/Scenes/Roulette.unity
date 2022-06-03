@@ -889,7 +889,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 4a1e6228316f8de40bd3232c20c8d222, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -897,18 +909,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 100
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 4a1e6228316f8de40bd3232c20c8d222, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -979,6 +979,7 @@ GameObject:
   - component: {fileID: 232014548}
   - component: {fileID: 232014547}
   - component: {fileID: 232014546}
+  - component: {fileID: 232014550}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1080,6 +1081,59 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &232014550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232014545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e0afde225fbf141b070183d3509cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RouletteList:
+  - {fileID: 2119312980}
+  - {fileID: 322139914}
+  - {fileID: 1079550319}
+  - {fileID: 1287435372}
+  - {fileID: 1887289618}
+  - {fileID: 210645056}
+  - {fileID: 1764751688}
+  - {fileID: 1562875556}
+  - {fileID: 429686870}
+  - {fileID: 1189876117}
+  - {fileID: 889320064}
+  - {fileID: 559909587}
+  - {fileID: 1325610056}
+  - {fileID: 961541427}
+  - {fileID: 941705212}
+  - {fileID: 1454709778}
+  - {fileID: 419850985}
+  - {fileID: 819028100}
+  - {fileID: 1069779894}
+  - {fileID: 26375147}
+  - {fileID: 1424548683}
+  - {fileID: 1515141529}
+  - {fileID: 71724289}
+  - {fileID: 1076548301}
+  - {fileID: 1006654507}
+  - {fileID: 1784599949}
+  - {fileID: 385339916}
+  - {fileID: 605237608}
+  - {fileID: 2064767311}
+  - {fileID: 885610167}
+  - {fileID: 1996836750}
+  - {fileID: 1430274797}
+  - {fileID: 2015145843}
+  - {fileID: 953723358}
+  - {fileID: 537906170}
+  - {fileID: 1385481459}
+  currentSprite: {fileID: 21300000, guid: 9d79e37d5b670ea4a9792bca5aa171f1, type: 3}
+  PlayerBank: {fileID: 2629790}
+  InputAmount: {fileID: 954149943}
+  gd: {fileID: 11400000, guid: b915bfe0f4c1e7548970e756a47df666, type: 2}
 --- !u!1 &240144617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,6 +1753,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSelectedColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &640361343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1891,7 +1957,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 24f381b555f1ccc41947dcccc5d1fbb5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -1899,18 +1977,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 20
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 24f381b555f1ccc41947dcccc5d1fbb5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2291,7 +2357,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 58c6c3b2549517543b35933194ef1ad1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 500
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -2299,18 +2377,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 500
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 58c6c3b2549517543b35933194ef1ad1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2629,7 +2695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.9729996}
+  m_AnchoredPosition: {x: 0, y: 2.9730072}
   m_SizeDelta: {x: 0, y: 5.946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027795231
@@ -2652,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: R
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2661,8 +2727,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2679,8 +2745,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2906,7 +2972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.9729996}
+  m_AnchoredPosition: {x: 0, y: 2.9730072}
   m_SizeDelta: {x: 0, y: 5.946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108537971
@@ -2929,7 +2995,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2938,8 +3004,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2956,8 +3022,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3194,6 +3260,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSelectedColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1209947659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3406,7 +3484,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: a7d832e43f5518942be8819e16c7cb8b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -3414,18 +3504,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: a7d832e43f5518942be8819e16c7cb8b, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3688,7 +3766,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 49dc0debadcde724b99ff87b650a6b70, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -3696,18 +3786,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 49dc0debadcde724b99ff87b650a6b70, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4058,7 +4136,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 9d79e37d5b670ea4a9792bca5aa171f1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 0
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -4066,18 +4156,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 0
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 9d79e37d5b670ea4a9792bca5aa171f1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4306,7 +4384,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e864a76684895f14598867400b46054d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 1000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -4314,18 +4404,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1000
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: e864a76684895f14598867400b46054d, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4338,91 +4416,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590701458}
   m_CullTransparentMesh: 1
---- !u!1 &1640484000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1640484002}
-  - component: {fileID: 1640484001}
-  m_Layer: 0
-  m_Name: RouletteManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1640484001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640484000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e0afde225fbf141b070183d3509cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RouletteList:
-  - {fileID: 2119312980}
-  - {fileID: 322139914}
-  - {fileID: 1079550319}
-  - {fileID: 1287435372}
-  - {fileID: 1887289618}
-  - {fileID: 210645056}
-  - {fileID: 1764751688}
-  - {fileID: 1562875556}
-  - {fileID: 429686870}
-  - {fileID: 1189876117}
-  - {fileID: 889320064}
-  - {fileID: 559909587}
-  - {fileID: 1325610056}
-  - {fileID: 961541427}
-  - {fileID: 941705212}
-  - {fileID: 1454709778}
-  - {fileID: 419850985}
-  - {fileID: 819028100}
-  - {fileID: 1069779894}
-  - {fileID: 26375147}
-  - {fileID: 1424548683}
-  - {fileID: 1515141529}
-  - {fileID: 71724289}
-  - {fileID: 1076548301}
-  - {fileID: 1006654507}
-  - {fileID: 1784599949}
-  - {fileID: 385339916}
-  - {fileID: 605237608}
-  - {fileID: 2064767311}
-  - {fileID: 885610167}
-  - {fileID: 1996836750}
-  - {fileID: 1430274797}
-  - {fileID: 2015145843}
-  - {fileID: 953723358}
-  - {fileID: 537906170}
-  - {fileID: 1385481459}
-  dead: {fileID: 0}
-  chipValue: 0
-  PlayerBank: {fileID: 2629790}
-  InputAmount: {fileID: 954149943}
-  gd: {fileID: 11400000, guid: b915bfe0f4c1e7548970e756a47df666, type: 2}
---- !u!4 &1640484002
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640484000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320, y: 240, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1764751688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3595792542092696505, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
@@ -4757,7 +4750,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
+        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 5abc4d26565cc4843856e7ed112abfaa, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 50
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SetBetAmount
         m_Mode: 3
@@ -4765,18 +4770,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 50
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1640484001}
-        m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 5abc4d26565cc4843856e7ed112abfaa, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5329,7 +5322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1640484001}
+      - m_Target: {fileID: 232014550}
         m_TargetAssemblyTypeName: RouletteLogic, Assembly-CSharp
         m_MethodName: SpinWheel
         m_Mode: 1
@@ -5356,6 +5349,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 232014549}
     m_Modifications:
+    - target: {fileID: 3595792542092696504, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542092696504, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542092696506, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5428,6 +5429,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542104172415, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542104172415, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542304748708, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542304748708, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542304748708, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -458.10004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542304748708, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542304748710, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5464,6 +5489,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542343122309, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542343122309, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542343122311, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5495,6 +5528,14 @@ PrefabInstance:
     - target: {fileID: 3595792542343122311, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542392728481, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542392728481, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792542392728483, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -5560,6 +5601,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542459080062, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542459080062, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542475297762, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542475297762, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542475297764, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5591,6 +5648,14 @@ PrefabInstance:
     - target: {fileID: 3595792542475297764, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542554936988, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542554936988, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792542554936990, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -5624,6 +5689,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542593177272, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542593177272, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542593177274, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5656,6 +5729,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542717506407, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542717506407, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542717506409, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5687,6 +5768,14 @@ PrefabInstance:
     - target: {fileID: 3595792542717506409, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542741316481, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542741316481, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792542741316483, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -5752,6 +5841,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542746685503, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542746685503, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542830392404, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542830392404, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542830392406, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5784,6 +5889,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542908537707, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542908537707, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542908537709, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5815,6 +5928,14 @@ PrefabInstance:
     - target: {fileID: 3595792542908537709, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542952063421, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542952063421, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792542952063423, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -5880,6 +6001,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792542957871135, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542957871135, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542990728930, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792542990728930, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792542990728932, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5911,6 +6048,14 @@ PrefabInstance:
     - target: {fileID: 3595792542990728932, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543055619589, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543055619589, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543055619591, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -5944,6 +6089,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543214982040, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543214982040, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543214982042, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -5975,6 +6128,14 @@ PrefabInstance:
     - target: {fileID: 3595792543214982042, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543281785098, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543281785098, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543281785100, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6008,6 +6169,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543295432741, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543295432741, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543295432743, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6039,6 +6208,14 @@ PrefabInstance:
     - target: {fileID: 3595792543295432743, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543347947229, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543347947229, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543347947231, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6082,7 +6259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543401159089, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543401159089, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6160,6 +6337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Numbers
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543402649926, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543402649926, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543402649928, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6191,6 +6376,14 @@ PrefabInstance:
     - target: {fileID: 3595792543402649928, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543417214220, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543417214220, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543417214222, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6256,6 +6449,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 671
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543420795694, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543428581317, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543428581317, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543428581319, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6287,6 +6512,14 @@ PrefabInstance:
     - target: {fileID: 3595792543428581319, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543486948425, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543486948425, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543486948427, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6320,6 +6553,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543498965104, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543498965104, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543498965106, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6351,6 +6592,14 @@ PrefabInstance:
     - target: {fileID: 3595792543498965106, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543554568820, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543554568820, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543554568822, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6384,6 +6633,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543625695920, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543625695920, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543625695922, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6415,6 +6672,18 @@ PrefabInstance:
     - target: {fileID: 3595792543625695922, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543627803208, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.9730072
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543746789363, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543746789363, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543746789365, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6448,6 +6717,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543844045085, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543844045085, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543844045087, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6479,6 +6756,14 @@ PrefabInstance:
     - target: {fileID: 3595792543844045087, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543969085467, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543969085467, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792543969085469, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
@@ -6512,6 +6797,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792543978906278, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792543978906278, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792543978906280, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6544,6 +6837,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3595792544060354812, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792544060354812, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3595792544060354814, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -6575,6 +6876,14 @@ PrefabInstance:
     - target: {fileID: 3595792544060354814, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792544139810298, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595792544139810298, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3595792544139810300, guid: c4b3e4fd8eeecf04fbfb1b1fca231a40, type: 3}
       propertyPath: m_TargetGraphic

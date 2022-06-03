@@ -11,7 +11,7 @@ public class RoulettePiece
     string colorString;
 }
 
-public class RouletteLogic : Singleton<RouletteLogic>
+public class RouletteLogic : MonoBehaviour
 { 
     //list of roulette pieces
     public List<GameObject> RouletteList = new List<GameObject>();
@@ -19,13 +19,14 @@ public class RouletteLogic : Singleton<RouletteLogic>
 
     RoulettePiece winningPiece;
 
-    public RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
+    public static RoulettePieceColor selectedColor = RoulettePieceColor.noColor;
 
-    public Sprite dead;
-    public int chipValue;
+    public Sprite currentSprite;
+    public static Sprite dead;
+    public static int chipValue { get; set; }
 
-    [SerializeField] TMP_Text PlayerBank;
-    [SerializeField] TMP_Text InputAmount;
+    [SerializeField] public TMP_Text PlayerBank;
+    [SerializeField] public TMP_Text InputAmount;
     public GameData gd;
     int betAmount;
 
@@ -34,7 +35,7 @@ public class RouletteLogic : Singleton<RouletteLogic>
     private void Start()
     {
 
-        
+        dead = currentSprite;
 
         /*for (int i = 0; i < 36; i++)
         {
@@ -85,8 +86,34 @@ public class RouletteLogic : Singleton<RouletteLogic>
 
     private void Update()
     {
-        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+        //PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
         betAmount = 0;
+    }
+
+    public static void SetSelectedColor(RoulettePieceColor color)
+    {
+        selectedColor = color;
+    }
+
+    public int GetPlayerBank()
+    {
+        return gd.intData["PlayerBank"];
+    }
+
+    public void UpdatePlayerBank()
+    {
+        //gd.intData["PlayerBank"] += ;
+        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+    }
+
+    public static Sprite GetCurrentChip()
+    {
+        return dead;
+    }
+
+    public static int GetChipValue()
+    {
+        return chipValue;
     }
 
     public void CheckRoulettePiece()
@@ -98,6 +125,21 @@ public class RouletteLogic : Singleton<RouletteLogic>
                 print(item.GetComponent<RouletteButtonScript>().Val + " was true");
                 selectedSpots.Add(item);
             }
+        }
+    }
+
+    public void SetSelectedColor(int choice)
+    {
+        switch (choice)
+        {
+            case 0:
+                selectedColor = RoulettePieceColor.red;
+                print("red color selected");
+                break;
+            case 1:
+                selectedColor = RoulettePieceColor.black;
+                print("black color selected");
+                break;
         }
     }
 
