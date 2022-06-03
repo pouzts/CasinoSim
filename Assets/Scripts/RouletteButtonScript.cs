@@ -15,14 +15,14 @@ public class RouletteButtonScript : MonoBehaviour
     {
         var temp = GetComponent<Image>();
         var tempAlpha = GetComponent<Image>().color;
-/*        if (RouletteLogic.GetPlayerBank() < 0)
+        if (RouletteLogic.GetPlayerBank() < 0)
         {
             print("Can't bet anymore");
             return;
-        }*/
-/*        else
-        {*/
-            if (IsTrue)
+        }
+        /*        else
+                {*/
+        if (IsTrue)
             {
                 tempAlpha.a = 0;
                 gameObject.GetComponent<Image>().color = tempAlpha;

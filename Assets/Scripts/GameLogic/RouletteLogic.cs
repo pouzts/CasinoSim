@@ -26,11 +26,12 @@ public class RouletteLogic : MonoBehaviour
     public static int chipValue { get; set; }
     public GameObject selectedColorPiece;
 
-    [SerializeField] public TMP_Text PlayerBank;
-    [SerializeField] public TMP_Text InputAmount;
+    [SerializeField] TMP_Text PlayerBank;
+    [SerializeField] TMP_Text InputAmount;
     [SerializeField] GameObject Lose;
     public GameData gd;
     int betAmount;
+    public static int PlayerbankAmount;
 
     //start
     //generate list
@@ -40,12 +41,13 @@ public class RouletteLogic : MonoBehaviour
         dead = currentSprite;
         Lose.SetActive(false);
 
-        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+        //PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
         InputAmount.text = "$" + 0;
     }
 
     private void Update()
     {
+        PlayerbankAmount = gd.intData["PlayerBank"];
         InputAmount.text = "$" + betAmount;
         PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
     }
@@ -55,13 +57,19 @@ public class RouletteLogic : MonoBehaviour
         selectedColor = color;
     }
 
-    public int GetPlayerBank()
+    public void ResetLose()
     {
-        return gd.intData["PlayerBank"];
+        Lose.SetActive(false);
     }
 
     public void UpdatePlayerBank(GameObject gameObject)
     {
+        if (gd.intData["PlayerBank"] < 0)
+        {
+            Lose.SetActive(true);
+            print("Can't bet anymore");
+            return;
+        }
         //print("this object was selected");
         switch (gameObject.GetComponent<RouletteButtonScript>().IsTrue)
         {
@@ -75,8 +83,8 @@ public class RouletteLogic : MonoBehaviour
                 gameObject.GetComponent<RouletteButtonScript>().betVal = 0;
                 break;
         }
-        PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
-        InputAmount.text = "$" + betAmount;
+        //PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+        //InputAmount.text = "$" + betAmount;
     }
 
     public static Sprite GetCurrentChip()
@@ -99,6 +107,11 @@ public class RouletteLogic : MonoBehaviour
                 selectedSpots.Add(RouletteList[i]);
             }
         }
+    }
+
+    public static int GetPlayerBank()
+    {
+        return PlayerbankAmount;
     }
 
     public void SetSelectedColor(int choice)
@@ -131,7 +144,7 @@ public class RouletteLogic : MonoBehaviour
             //get random number 0 - 35
             int roll = Random.Range(0, 35);
             //winingPiece = list[rand]
-            var winningPiece = RouletteList[1];
+            var winningPiece = RouletteList[roll];
             print("piece value:" + winningPiece.GetComponent<RouletteButtonScript>().Val + "piece color:" + winningPiece.GetComponent<RouletteButtonScript>().Color.ToString());            
             CheckRoulettePiece();
 
@@ -192,9 +205,9 @@ public class RouletteLogic : MonoBehaviour
                 print("lose");
             }
 
-            PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
+            //PlayerBank.text = "$" + gd.intData["PlayerBank"].ToString();
             betAmount = 0;
-            InputAmount.text = "$" + betAmount;
+            //InputAmount.text = "$" + betAmount;
             foreach(var lol in RouletteList)
             {
                 lol.GetComponent<RouletteButtonScript>().ResetButton();
